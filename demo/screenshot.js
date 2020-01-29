@@ -10,12 +10,9 @@ const fullscreen = true;
     slowMo: 3,
   });
   const page = await browser.newPage();
-  await page.setViewport({
-    width: 600,
-    height: 500,
-    deviceScaleFactor: 1,
-  });
-  await page.goto('https://www.nytimes.com/');
+
+  await page.goto('https://en.wikipedia.org/wiki/Mozilla');
+  await page.waitFor(5);
 
   if (fullscreen) {
     await page.screenshot({path: 'screenshot.png', fullPage: true});
