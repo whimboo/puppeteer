@@ -2,7 +2,7 @@
 
 const puppeteer = require('puppeteer');
 
-const fullscreen = true;
+const fullscreen = process.env.FULL || false;
 
 (async() => {
   const browser = await puppeteer.launch({
